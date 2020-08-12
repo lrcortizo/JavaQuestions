@@ -1,6 +1,5 @@
 package questions;
 
-
 /*
     Background:
     The Aeroplane class already defines a method called "fly" and has an implementation for it.
@@ -12,5 +11,21 @@ package questions;
     The FlyingCar should drive exactly like a Car drives, without copy-and-pasting the drive method.
 
  */
-public class FlyingCar {
+public class FlyingCar implements IAeroplane, ICar {
+
+	private Aeroplane aeroplane;
+	private Car car;
+
+	public FlyingCar() {
+		this.aeroplane = new Aeroplane();
+		this.car = new Car();
+	}
+
+	public void fly() {
+		aeroplane.fly();
+	}
+
+	public void drive() {
+		car.drive();
+	}
 }

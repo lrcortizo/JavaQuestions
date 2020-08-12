@@ -1,6 +1,6 @@
 package questions;
 
-public class Car {
+public class Car implements ICar {
 
     public void drive() {
         System.out.println("I'm driving like a car");
