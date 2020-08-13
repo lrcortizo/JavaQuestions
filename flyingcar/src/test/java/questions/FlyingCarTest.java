@@ -4,18 +4,21 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class FlyingCarTest {
-	
+
 	private Aeroplane aeroplane;
 	private Car car;
 	private FlyingCar flyingCar;
-	
+
 	@Before
 	public void setup() {
 		aeroplane = new Aeroplane();
 		car = new Car();
 		flyingCar = new FlyingCar();
 	}
-	
+
+	/**
+	 * Sample run test
+	 */
 	@Test
 	public void testFlyingCar() {
 		System.out.println("--COMPARING FLIGHTS--\nFlyingCar:");

@@ -28,4 +28,20 @@ public class FlyingCar implements IAeroplane, ICar {
 	public void drive() {
 		car.drive();
 	}
+
+	public Aeroplane getAeroplane() {
+		return aeroplane;
+	}
+
+	public void setAeroplane(Aeroplane aeroplane) {
+		this.aeroplane = aeroplane;
+	}
+
+	public Car getCar() {
+		return car;
+	}
+
+	public void setCar(Car car) {
+		this.car = car;
+	}
 }

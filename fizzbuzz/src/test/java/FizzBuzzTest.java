@@ -15,9 +15,10 @@ public class FizzBuzzTest {
 
 	@Test
 	public void testFizzBuzz() {
-		assertThat("Fizz", equalTo(fizzBuzz.run(3)));
-		assertThat("Buzz", equalTo(fizzBuzz.run(5)));
-		assertThat("FizzBuzz", equalTo(fizzBuzz.run(15)));
-		assertThat("2", equalTo(fizzBuzz.run(2)));
+		assertThat("1", equalTo(fizzBuzz.run(1)));
+		assertThat("Fizz", equalTo(fizzBuzz.run(6)));
+		assertThat("Buzz", equalTo(fizzBuzz.run(10)));
+		assertThat("FizzBuzz", equalTo(fizzBuzz.run(30)));
+		assertThat("98", equalTo(fizzBuzz.run(98)));
 	}
 }
