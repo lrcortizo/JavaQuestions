@@ -17,7 +17,7 @@ public class FizzBuzz {
 		} else if (value % 5 == 0) {
 			return "Buzz";
 		}
-		
+
 		return String.valueOf(value);
 	}
 

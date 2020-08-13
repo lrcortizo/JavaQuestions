@@ -1,6 +1,5 @@
 package questions;
 
-
 /*
     Background:
     This calculator uses a single Node class to create a tree structure that is used to perform
@@ -17,27 +16,29 @@ package questions;
 */
 public class Calculator {
 
-    public void run() {
-        // 2 + 3 * 4
-        Node times = new Node("*",0);
-        Node three = new Node(null, 3);
-        Node four = new Node(null, 4);
+	public void run() {
+		// 2 + 3 * 4
+		Operation multiplicationOperation = new MultiplicationOperation();
+		Node times = new Node(multiplicationOperation, 0);
+		Node three = new Node(null, 3);
+		Node four = new Node(null, 4);
 
-        // first 3 * 4
-        times.setLeftNode(three);
-        times.setRightNode(four);
+		// first 3 * 4
+		times.setLeftNode(three);
+		times.setRightNode(four);
 
-        // then 2 + result above
-        Node two = new Node(null, 2);
-        Node plus = new Node("+",0);
+		// then 2 + result above
+		Node two = new Node(null, 2);
+		Operation additionOperation = new AdditionOperation();
+		Node plus = new Node(additionOperation, 0);
 
-        plus.setLeftNode(two);
-        plus.setRightNode(times);
-        System.out.println(plus.calculate());
-    }
+		plus.setLeftNode(two);
+		plus.setRightNode(times);
+		System.out.println(plus.calculate());
+	}
 
-    public static void main(String... args) {
-        Calculator c = new Calculator();
-        c.run();
-    }
+	public static void main(String... args) {
+		Calculator c = new Calculator();
+		c.run();
+	}
 }
